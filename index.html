@@ -15,17 +15,20 @@
 
 <body>
 
-	<!-- HERO -->
+	<!-- HERO SECTION-->
 	<section id="hero">
-		<div class="row">
-			<h1>Find Your Place on the REMAX® Map</h1>
-			<p>
-				The REMAX network spans more than 120 countries and territories. In select approved markets, qualified leaders
-				may
-				be considered for opportunities to lead country-level growth, convert an existing business or open a REMAX
-				office.
-			</p>
-			<a class="btn" href="#">Request Market Availability</a>
+		<div class="row grid grid-hero">
+			<div>
+				<h1>Find Your Place on the REMAX<sup>®</sup> Map</h1>
+				<p>
+					The REMAX network spans more than 120 countries and territories. In select approved markets, qualified leaders
+					may
+					be considered for opportunities to lead country-level growth, convert an existing business or open a REMAX
+					office.
+				</p>
+				<a class="btn" href="#">Request Market Availability</a>
+			</div>
+			<div></div>
 		</div>
 	</section>
 
@@ -37,11 +40,42 @@
 				communities in markets of every size. In select countries and territories, opportunity remains for qualified
 				entrepreneurs, investors and real estate operators ready to build, convert or grow with a global real estate
 				brand. </p>
-			<p> Some markets are open for a first REMAX presence. Some are ready for additional office growth. Some may offer
-				opportunities for established businesses to transition into the REMAX network. </p>
+			<ul>
+				<li> Some markets are open for a first REMAX presence. </li>
+				<li> Some are ready for additional office growth.</li>
+				<li> Some may offer opportunities for established businesses to transition into the REMAX network. </li>
+			</ul>
+			
+				<p></p>
 			<p><strong>Explore the map to see which opportunities may be available by country or territory.</strong></p>
 			<div class="map-wrapper">
-				MAP/COUNTRY SELECTOR
+				<div id="world-map" aria-label="Interactive world map"></div>
+				<div id="map-tooltip" role="tooltip" hidden></div>
+				<button type="button" id="map-reset" class="map-reset">Reset view</button>
+			</div>
+			<div id="map-legend" class="map-legend" aria-label="Map legend">
+				<div class="legend-item">
+					<span class="legend-swatch legend-master"></span>
+					<span>Master Franchise Review May Be Available</span>
+				</div>
+				<div class="legend-item">
+					<span class="legend-swatch legend-office"></span>
+					<span>Office or Conversion Opportunities May Be Available</span>
+				</div>
+				<div class="legend-item">
+					<span class="legend-swatch legend-none"></span>
+					<span>No Current Franchise Opportunities Available</span>
+				</div>
+			</div>
+			<div class="map-country-lists">
+				<div class="map-country-list">
+					<h3>Master Franchise Markets</h3>
+					<ul id="master-country-list"></ul>
+				</div>
+				<div class="map-country-list">
+					<h3>Office &amp; Conversion Markets</h3>
+					<ul id="office-country-list"></ul>
+				</div>
 			</div>
 			<p>
 				Franchise availability varies by country and territory. Select a market to see which REMAX franchise
@@ -105,8 +139,6 @@
 
 			</div>
 			<div class="path">
-
-
 				<p class="big-number">3</p>
 				<h3>Open Something New</h3>
 				<p class="subhead">New Office Franchise</p>
@@ -119,6 +151,8 @@
 			</div>
 
 	</section>
+
+	<!-- CHOICES SECTION -->
 
 	<section id="choices">
 		<div class="row grid grid-choices">
@@ -173,7 +207,7 @@
 		</div>
 	</section>
 
-	<!-- BUILT FOR LEADERS -->
+	<!-- BUILT FOR LEADERS SECTION-->
 	<section id="built">
 		<div class="row">
 			<h2>Built for Leaders Who Build</h2>
@@ -190,7 +224,7 @@
 		</div>
 	</section>
 
-	<!-- PROCESS -->
+	<!-- PROCESS SECTION-->
 	<section id="#process">
 		<div class="row">
 			<h2>How the Process Works</h2>
@@ -205,7 +239,7 @@
 		</div>
 	</section>
 
-	<!-- CTA -->
+	<!-- CTA SECTION-->
 	<section id="cta">
 		<div class="row">
 			<h2>Ready to Explore Your Market?</h2>
@@ -219,6 +253,9 @@
 		</div>
 	</section>
 
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+	<script src="map.js"></script>
 </body>
 
 </html>
