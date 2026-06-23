@@ -46,7 +46,18 @@ section { width: 100%; padding-block: 6rem; position: relative;}
  BUTTONS
 ================================ */
 
-.btn { display: inline-block; padding: 1rem 2rem; border-radius: 4px; background: #0043ff; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s ease; } 
+.btn {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 4px;
+	background: #0043ff;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: background 0.2s ease;
+	margin-top: 1rem;
+}
 .btn:hover { background: #0c2749; } 
 
 /* ================================
@@ -201,6 +212,7 @@ section { width: 100%; padding-block: 6rem; position: relative;}
 .built-image {
 	height: 100%;
 	object-fit: cover;
+	border-radius: 1rem;
 }
 
 /* ================================
@@ -258,8 +270,14 @@ section { width: 100%; padding-block: 6rem; position: relative;}
     background: linear-gradient(to right, transparent, #ddd, transparent);
 }
 
+/* CTA */
 
-
+.cta-content{
+	display: grid;
+	gap: 1rem;
+	text-align: center;
+	justify-items: center;
+}
 
 /* ================================
  MAP
