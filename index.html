@@ -23,7 +23,6 @@
 		</video>
 		<div class="hero-overlay"></div>
 		<div class="hero-content row">
-			<div>
 				<h1>Find Your Place on the REMAX<sup>®</sup> Map</h1>
 				<p>
 					The REMAX network spans more than 120 countries and territories. In select approved markets, qualified leaders
@@ -32,15 +31,13 @@
 					office.
 				</p>
 				<a class="btn" href="#">Request Market Availability</a>
-			</div>
-			<div></div>
+			</>
 		</div>
 	</section>
 
 	<!-- MAP SECTION -->
 	<section id="map">
-
-		<div class="row">
+		<div class="row map-intro">
 			<h2 class="global-reach">Global Reach. Select Opportunities.</h2>
 			<div class="grid grid-2">
 				<p> Around the world, REMAX is represented by thousands of offices and agents serving buyers, sellers and
@@ -53,68 +50,50 @@
 					<li> Some may offer opportunities for established businesses to transition into the REMAX network. </li>
 				</ul>
 			</div>
+			<h3>Explore the map to see which opportunities may be available by country or territory.</h3>
 		</div>
 
 		<div class="row map-wrapper">
-			<div>
-				<p class="map-heading"><strong>Explore the map to see which opportunities may be available by country or
-						territory.</strong></p>
-				<div id="world-map" aria-label="Interactive world map"></div>
-				<div id="map-tooltip" role="tooltip" hidden></div>
-				<button type="button" id="map-reset" class="map-reset">Reset view</button>
-			</div>
+			
+			<div id="world-map" aria-label="Interactive world map"></div>
+			<div id="map-tooltip" role="tooltip" hidden></div>
+			<button type="button" id="map-reset" class="map-reset">Reset view</button>
 			<div id="map-legend" class="map-legend" aria-label="Map legend">
 				<div class="legend-item">
 					<span class="legend-swatch legend-master"></span>
-						<p>
-							<span class="legend-heading">Master Franchise Review May Be Available</span> <br>
-							Country-level franchise opportunities may be available for qualified candidates.
-						</p>
+					<div class="right">
+						<p class="legend-heading">Master Franchise Review May Be Available</p>
+						<p>Country-level franchise opportunities may be available for qualified candidates.</p>
+						<div class="map-country-list">
+							<details>
+								<summary>
+									View List
+								</summary>
+								<ul id="master-country-list"></ul>
+							</details>
+						</div>
+					</div>
 				</div>
 				<div class="legend-item">
 					<span class="legend-swatch legend-office"></span>
-					<p><span class="legend-heading">Office or Conversion Opportunities May Be Available</span>
-					<br>
-					This market has an existing REMAX presence, with potential office franchise or business conversion opportunities subject to review.
-					</p>
+					<div class="right">
+						<p class="legend-heading">Office or Conversion Opportunities May Be Available</p>
+						<p>This market has an existing REMAX presence, with potential office franchise or business conversion
+							opportunities subject to review.</p>
+						<div class="map-country-list">
+							<details>
+								<summary>View List</summary>
+								<ul id="office-country-list"></ul>
+							</details>
+						</div>
+					</div>
 				</div>
+
 				<div class="legend-item">
 					<span class="legend-swatch legend-none"></span>
-					<p><span class="legend-heading">No Current Franchise Opportunities Available</span><br></p>
+					<p class="legend-heading">No Current Franchise Opportunities Available</p>
 				</div>
 			</div>
-		</div>
-
-		<div class="row map-country-lists">
-			<div class="map-country-list">
-				<h3>Master Franchise Markets</h3>
-				<ul id="master-country-list"></ul>
-			</div>
-			<div class="map-country-list">
-				<h3>Office &amp; Conversion Markets</h3>
-				<ul id="office-country-list"></ul>
-			</div>
-		</div>
-		<p>
-			Franchise availability varies by country and territory. Select a market to see which REMAX franchise
-			opportunities
-			may currently be open for review.
-		</p>
-		<a class="btn" href="#">Check Market Availability</a>
-		<div>
-			<h3>Master Franchise Review May Be Available</h3>
-			<p>Country-level franchise opportunities may be available for qualified candidates.</p>
-		</div>
-		<div>
-			<h3>Office or Conversion Opportunities May Be Available</h3>
-			<p>This market has an existing REMAX presence, with potential office franchise or business conversion
-				opportunities
-				subject to review.</p>
-		</div>
-		<div>
-			<h3>No Current Franchise Opportunities Available</h3>
-			<p>There are no current franchise opportunities available in this market.</p>
-		</div>
 		</div>
 	</section>
 
@@ -172,7 +151,6 @@
 	</section>
 
 	<!-- CHOICES SECTION -->
-
 	<section id="choices">
 		<div class="row grid grid-choices">
 			<!-- NEW MARKET -->
