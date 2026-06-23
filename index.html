@@ -58,7 +58,7 @@
 
 		<div class="row map-wrapper">
 			<div>
-				<p class="text-center"><strong>Explore the map to see which opportunities may be available by country or
+				<p class="map-heading"><strong>Explore the map to see which opportunities may be available by country or
 						territory.</strong></p>
 				<div id="world-map" aria-label="Interactive world map"></div>
 				<div id="map-tooltip" role="tooltip" hidden></div>
@@ -67,19 +67,26 @@
 			<div id="map-legend" class="map-legend" aria-label="Map legend">
 				<div class="legend-item">
 					<span class="legend-swatch legend-master"></span>
-					<span>Master Franchise Review May Be Available</span>
+						<p>
+							<span class="legend-heading">Master Franchise Review May Be Available</span> <br>
+							Country-level franchise opportunities may be available for qualified candidates.
+						</p>
 				</div>
 				<div class="legend-item">
 					<span class="legend-swatch legend-office"></span>
-					<span>Office or Conversion Opportunities May Be Available</span>
+					<p><span class="legend-heading">Office or Conversion Opportunities May Be Available</span>
+					<br>
+					This market has an existing REMAX presence, with potential office franchise or business conversion opportunities subject to review.
+					</p>
 				</div>
 				<div class="legend-item">
 					<span class="legend-swatch legend-none"></span>
-					<span>No Current Franchise Opportunities Available</span>
+					<p><span class="legend-heading">No Current Franchise Opportunities Available</span><br>There are no current franchise opportunities available in this market.</p>
 				</div>
 			</div>
 		</div>
-		<div class="map-country-lists">
+
+		<div class="row map-country-lists">
 			<div class="map-country-list">
 				<h3>Master Franchise Markets</h3>
 				<ul id="master-country-list"></ul>

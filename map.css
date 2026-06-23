@@ -1,5 +1,36 @@
 /* MAP */
 
+/* MAP */
+#map {
+	padding-top: 6rem;
+	background-color: #F7F5EE;
+}
+
+.map-wrapper {
+	margin-block: 2rem;
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+	flex-direction: column;
+	background-color: #ffffff;
+	border-radius: 1rem;
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.05),
+		0 4px 12px rgba(0, 0, 0, 0.08);
+	padding-block: 3rem;
+	padding-right: 1rem;
+}
+
+#world-map {
+	width: 100%;
+	min-height: 400px;
+}
+
+.map-heading{
+	text-align: center;
+	padding-inline: 3rem;
+}
+
 .map-svg {
 	width: 100%;
 	height: auto;
@@ -17,9 +48,6 @@
 	cursor: pointer;
 	stroke: white;
 }
-
-
-
 .country.is-hovered,
 .country.is-pinned {
 	filter: brightness(1.08);
@@ -69,27 +97,32 @@
 }
 
 .map-legend {
-	display: flex;
-	flex-wrap: nowrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 1rem 2rem;
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
 	font-size: 0.875rem;
 	text-wrap: balance;
+	justify-self: center;
+	padding-inline: 3rem;
 }
 
 .legend-item {
 	display: flex;
-	align-items: center;
-	gap: 0.5rem;
+	gap: 1rem;
+	
 }
-
+.legend-heading{
+	font-weight: 700;
+}
 .legend-swatch {
 	display: inline-block;
-	width: 16px;
-	height: 16px;
+	width: 1.5rem;
+	height: 1.5rem;
 	border-radius: 2px;
 	flex-shrink: 0;
+	margin-top: 4px;
 }
 
 .legend-master {
@@ -101,7 +134,7 @@
 }
 
 .legend-none {
-	background: hsl(0, 0%, 90%);
+	background: #dadada;
 }
 
 .map-country-lists {

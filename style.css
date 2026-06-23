@@ -187,32 +187,6 @@ section {
 	font-size: 1.25rem;
 }
 
-/* MAP */
-#map {
-	padding-top: 6rem;
-	background-color: #F7F5EE;
-}
-
-.map-wrapper {
-	margin-top: 2rem;
-	position: relative;
-	min-height: 400px;
-	width: 100%;
-	border-radius: 4px;
-	
-	flex-direction: column;
-	background-color: #ffffff;
-	border-radius: 1rem;
-	box-shadow:
-		0 1px 3px rgba(0, 0, 0, 0.05),
-		0 4px 12px rgba(0, 0, 0, 0.08);
-	padding: 3rem;
-}
-
-#world-map {
-	width: 100%;
-	min-height: 400px;
-}
 
 
 
