@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="map.css">
 
 </head>
 
@@ -17,7 +18,12 @@
 
 	<!-- HERO SECTION-->
 	<section id="hero">
-		<div class="row grid grid-hero">
+		<video autoplay muted loop playsinline poster="img/bg-2.png" class="hero-video">
+			<source src="img/bg2.webm" type="video/webm">
+			<source src="img/bg2.mp4" type="video/mp4">
+		</video>
+		<div class="hero-overlay"></div>
+		<div class="hero-content row">
 			<div>
 				<h1>Find Your Place on the REMAX<sup>®</sup> Map</h1>
 				<p>
@@ -34,21 +40,26 @@
 
 	<!-- MAP SECTION -->
 	<section id="map">
+
 		<div class="row">
-			<h2>Global Reach. Select Opportunities.</h2>
-			<p> Around the world, REMAX is represented by thousands of offices and agents serving buyers, sellers and
-				communities in markets of every size. In select countries and territories, opportunity remains for qualified
-				entrepreneurs, investors and real estate operators ready to build, convert or grow with a global real estate
-				brand. </p>
-			<ul>
-				<li> Some markets are open for a first REMAX presence. </li>
-				<li> Some are ready for additional office growth.</li>
-				<li> Some may offer opportunities for established businesses to transition into the REMAX network. </li>
-			</ul>
-			
-				<p></p>
-			<p><strong>Explore the map to see which opportunities may be available by country or territory.</strong></p>
-			<div class="map-wrapper">
+			<h2 class="text-center">Global Reach. Select Opportunities.</h2>
+			<div class="grid grid-2">
+				<p> Around the world, REMAX is represented by thousands of offices and agents serving buyers, sellers and
+					communities in markets of every size. In select countries and territories, opportunity remains for qualified
+					entrepreneurs, investors and real estate operators ready to build, convert or grow with a global real estate
+					brand. </p>
+				<ul>
+					<li> Some markets are open for a first REMAX presence. </li>
+					<li> Some are ready for additional office growth.</li>
+					<li> Some may offer opportunities for established businesses to transition into the REMAX network. </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row map-wrapper">
+			<div>
+				<p class="text-center"><strong>Explore the map to see which opportunities may be available by country or
+						territory.</strong></p>
 				<div id="world-map" aria-label="Interactive world map"></div>
 				<div id="map-tooltip" role="tooltip" hidden></div>
 				<button type="button" id="map-reset" class="map-reset">Reset view</button>
@@ -67,38 +78,40 @@
 					<span>No Current Franchise Opportunities Available</span>
 				</div>
 			</div>
-			<div class="map-country-lists">
-				<div class="map-country-list">
-					<h3>Master Franchise Markets</h3>
-					<ul id="master-country-list"></ul>
-				</div>
-				<div class="map-country-list">
-					<h3>Office &amp; Conversion Markets</h3>
-					<ul id="office-country-list"></ul>
-				</div>
+		</div>
+		<div class="map-country-lists">
+			<div class="map-country-list">
+				<h3>Master Franchise Markets</h3>
+				<ul id="master-country-list"></ul>
 			</div>
-			<p>
-				Franchise availability varies by country and territory. Select a market to see which REMAX franchise
-				opportunities
-				may currently be open for review.
-			</p>
-			<a class="btn" href="#">Check Market Availability</a>
-			<div>
-				<h3>Master Franchise Review May Be Available</h3>
-				<p>Country-level franchise opportunities may be available for qualified candidates.</p>
-			</div>
-			<div>
-				<h3>Office or Conversion Opportunities May Be Available</h3>
-				<p>This market has an existing REMAX presence, with potential office franchise or business conversion
-					opportunities
-					subject to review.</p>
-			</div>
-			<div>
-				<h3>No Current Franchise Opportunities Available</h3>
-				<p>There are no current franchise opportunities available in this market.</p>
+			<div class="map-country-list">
+				<h3>Office &amp; Conversion Markets</h3>
+				<ul id="office-country-list"></ul>
 			</div>
 		</div>
+		<p>
+			Franchise availability varies by country and territory. Select a market to see which REMAX franchise
+			opportunities
+			may currently be open for review.
+		</p>
+		<a class="btn" href="#">Check Market Availability</a>
+		<div>
+			<h3>Master Franchise Review May Be Available</h3>
+			<p>Country-level franchise opportunities may be available for qualified candidates.</p>
+		</div>
+		<div>
+			<h3>Office or Conversion Opportunities May Be Available</h3>
+			<p>This market has an existing REMAX presence, with potential office franchise or business conversion
+				opportunities
+				subject to review.</p>
+		</div>
+		<div>
+			<h3>No Current Franchise Opportunities Available</h3>
+			<p>There are no current franchise opportunities available in this market.</p>
+		</div>
+		</div>
 	</section>
+
 
 	<!-- PATH SECTION -->
 	<section id="path">

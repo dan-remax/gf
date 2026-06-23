@@ -1,6 +1,13 @@
 (function () {
 	"use strict";
 
+		const tierColors = {
+		master: "#0043ff",
+		office: "#000e35",
+		none: "#dadada",
+	};
+
+
 	// ISO 3166-1 numeric codes (world-atlas feature.id).
 	// Master takes precedence over office. All other countries render as "none".
 	// Uses countries-50m for small territories; territories.geojson adds French Guiana
@@ -174,11 +181,6 @@
 		"826", // United Kingdom
 	]);
 
-	const tierColors = {
-		master: "#0054A6",
-		office: "#000e35",
-		none: "#D1D3D4",
-	};
 
 	// Display names for country lists (may differ from map geography labels).
 	const countryLabels = {
