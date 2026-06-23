@@ -52,3 +52,35 @@
 .map-country-list li.is-selected {font-weight: 700;color: #000e35; } 
 
 .map-error {color: #000e35;padding: 2rem;text-align: center; } 
+
+
+.map-wrapper {
+    position: relative;
+}
+
+.map-gesture-hint {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%) translateY(6px);
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(0, 14, 53, 0.86);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+        opacity 160ms ease,
+        transform 160ms ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    white-space: nowrap;
+}
+
+.map-gesture-hint.is-visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}

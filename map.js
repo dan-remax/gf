@@ -1,7 +1,7 @@
 (function () {
 	"use strict";
 
-		const tierColors = {
+	const tierColors = {
 		master: "#0043ff",
 		office: "#000e35",
 		none: "#dadada",
@@ -563,10 +563,51 @@
 		unpin();
 	}
 
+	let gestureHint = null;
+	let gestureHintTimer = null;
+
+	function getZoomModifierLabel() {
+		const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform);
+		return isMac ? "⌘" : "Ctrl";
+	}
+
+	function showGestureHint(message) {
+		if (!gestureHint) {
+			gestureHint = document.createElement("div");
+			gestureHint.className = "map-gesture-hint";
+			gestureHint.setAttribute("aria-hidden", "true");
+			wrapper.appendChild(gestureHint);
+		}
+
+		gestureHint.textContent = message;
+		gestureHint.classList.add("is-visible");
+
+		window.clearTimeout(gestureHintTimer);
+
+		gestureHintTimer = window.setTimeout(() => {
+			gestureHint.classList.remove("is-visible");
+		}, 1400);
+	}
 	function initZoom() {
 		zoom = d3
 			.zoom()
 			.scaleExtent([1, 8])
+
+			.filter((event) => {
+				if (event.type === "wheel") {
+					return event.ctrlKey || event.metaKey;
+				}
+
+				if (event.type.startsWith("touch")) {
+					if (event.touches && event.touches.length < 2) {
+						showGestureHint("Use two fingers to move the map");
+						return false;
+					}
+				}
+
+				return true;
+			})
+
 			.on("zoom", (event) => {
 				g.attr("transform", event.transform);
 				updatePinnedTooltip();
@@ -574,10 +615,26 @@
 
 		svg.call(zoom);
 
+
+
+		svg.node().addEventListener(
+			"wheel",
+			(event) => {
+				if (event.ctrlKey || event.metaKey) return;
+
+				showGestureHint(
+					`Hold ${getZoomModifierLabel()} and scroll to zoom the map`
+				);
+			},
+			{ passive: true }
+		);
+
 		svg.on("click", () => {
 			if (pinnedCountryId) unpin();
 		});
 	}
+
+
 
 	function init() {
 		svg = d3.select(container).append("svg").attr("class", "map-svg");
